@@ -15,7 +15,6 @@ body {
     position: relative;
 }
 
-/* Добавляем затемнение */
 body::before {
     content: "";
     position: absolute;
