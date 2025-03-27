@@ -1,8 +1,30 @@
+html {
+    box-sizing: border-box;
+    font-family: "Inter", Arial;
+    align-items: center;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    .grid {
+        display: flex;
+        margin: 24px 0;
+        .colorful-button {
+            margin: 0 16px;
+        }
+    }
+}
+
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
 /* Затемняем фон */
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     text-align: center;
     background: #092756;
     background: -webkit-radial-gradient(0% 84%, ellipse cover, rgba(104, 128, 138, .4) -5%, rgba(138, 114, 76, 0) 38%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 25%, rgb(0 102 255 / 40%) 75%), -webkit-linear-gradient(-45deg, #c10006 -32%, #6a6b6c 100%);
@@ -64,7 +86,6 @@ header .server-ip {
     color: white;
     font-size: 26px;
     font-weight: bold;
-    font-family: monospace;
     margin-left: auto;
 }
 
@@ -94,8 +115,8 @@ h1 {
     display: inline-block;
     padding: 15px 30px;
     font-size: 18px;
-    color: white;
-    background: rgb(131,58,180);
+    color: black;
+    background: rgb(136, 23, 211);
     background: linear-gradient(142deg, rgba(131,58,180,1) 21%, rgb(251, 88, 88) 70%, rgba(252,176,69,1) 100%);
     border-radius: 30px;
     text-decoration: none;
