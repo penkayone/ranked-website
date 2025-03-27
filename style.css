@@ -73,13 +73,50 @@ header .logo {
     text-transform: uppercase;
 }
 
-header .nav-buttons {
+.nav-buttons {
     display: flex;
+    gap: 15px;
+}
+
+.colorful-button {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: linear-gradient(90deg, #4f46e5, #9333ea, #4f46e5); /* Фиолетовый градиент */
+    background-size: 300% 300%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
     align-items: center;
     gap: 10px;
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
+    transition: 5.1s ease-in-out;
+}
+
+/* Слой анимации */
+.animation-layer {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0.6;
+    transform: translateX(0);
+    transition: transform 1.8s ease-in-out;
+}
+
+/* Анимация при наведении */
+.colorful-button:hover .animation-layer {
+    transform: translateX(90%);
+}
+
+.colorful-button:hover {
+    background-position: 100% 50%;
 }
 
 header .server-ip {
@@ -88,8 +125,6 @@ header .server-ip {
     font-weight: bold;
     margin-left: auto;
 }
-
-
 
 /* Основной блок */
 main {
@@ -124,21 +159,65 @@ h1 {
     transition: 0.3s;
 }
 
+/* Стили для кнопок */
 .secondary-btn {
-    display: inline-block;
-    padding: 15px 30px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
     font-size: 18px;
-    color: black;
-    background: #a978a7;
-    border-radius: 30px;
-    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.secondary-btn:hover {
-    background-color: #783572;
+/* Градиентное свечение */
+.secondary-btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
 }
+
+/* Эффект наведения */
+.secondary-btn:hover {
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Анимация свечения */
+.secondary-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Дополнительный эффект: свечение границ */
+.secondary-btn::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.secondary-btn:hover::after {
+    opacity: 1;
+}
+
 .btn:hover {
     background: rgb(120, 0, 181);
     background: linear-gradient(142deg, rgb(120, 0, 149) 21%, rgb(220, 88, 88) 70%, rgb(211, 141, 42) 100%);
