@@ -1,24 +1,10 @@
 html {
     box-sizing: border-box;
-    font-family: "Inter", Arial;
-    align-items: center;
-    flex-direction: column;
     -webkit-font-smoothing: antialiased;
-    .grid {
-        display: flex;
-        margin: 24px 0;
-        .colorful-button {
-            margin: 0 16px;
-        }
-    }
 }
 
 * {
     box-sizing: inherit;
-    &:before,
-    &:after {
-        box-sizing: inherit;
-    }
 }
 
 /* Затемняем фон */
@@ -31,6 +17,9 @@ body {
     height: 100vh;
     color: white;
     position: relative;
+    font-family: "Inter", Arial;
+    align-items: center;
+    flex-direction: column;
 }
 
 body::before {
@@ -73,12 +62,35 @@ header .logo {
     text-transform: uppercase;
 }
 
+header menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+header menu ul li a {
+    position: relative;
+    padding: 14px 30px;
+    font-size: 18px;
+    color: black;
+    background: rgb(120, 0, 181);
+    background: linear-gradient(142deg, rgba(131, 58, 180, 1) 21%, rgb(251, 88, 88) 70%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 2px;
+    display: flex;
+}
+
 .nav-buttons {
     display: flex;
     gap: 15px;
 }
 
-.colorful-button {
+.colorful-button1 {
     position: relative;
     overflow: hidden;
     border: none;
@@ -100,6 +112,7 @@ header .logo {
 /* Слой анимации */
 .animation-layer {
     position: absolute;
+    z-index: 3;
     top: -50%;
     left: -50%;
     width: 200%;
@@ -111,11 +124,11 @@ header .logo {
 }
 
 /* Анимация при наведении */
-.colorful-button:hover .animation-layer {
+.colorful-button1:hover .animation-layer {
     transform: translateX(90%);
 }
 
-.colorful-button:hover {
+.colorful-button1:hover {
     background-position: 100% 50%;
 }
 
@@ -151,7 +164,7 @@ h1 {
     padding: 15px 30px;
     font-size: 18px;
     color: black;
-    background: rgb(136, 23, 211);
+    background: rgb(120, 0, 181);
     background: linear-gradient(142deg, rgba(131,58,180,1) 21%, rgb(251, 88, 88) 70%, rgba(252,176,69,1) 100%);
     border-radius: 30px;
     text-decoration: none;
