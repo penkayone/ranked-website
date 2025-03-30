@@ -1,0 +1,113 @@
+body {
+    background-color: #121212; /* Тёмный фон */
+    color: white;
+    font-family: "Inter", Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.gradient-text {
+    font-size: 36px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #B889CE 0%, #D05490 55%, #EA4245 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.filter-section {
+    margin: 20px 0;
+}
+
+input[type="date"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #222;
+    color: white;
+}
+
+.updates-list {
+    max-width: 600px;
+    margin: auto;
+}
+
+.update-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.update-item h2 {
+    color: #ff7f50;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.filter-container label {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.filter-container input {
+    background: #222;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.filter-container input:hover,
+.filter-container input:focus {
+    border-color: #aaa;
+}
+
+.filter-btn {
+    background: linear-gradient(142deg, #833ab4 21%, #fb5858 70%, #fcb045 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background: linear-gradient(142deg, #782b9b 21%, #dc5858 70%, #d38d2a 100%);
+}
