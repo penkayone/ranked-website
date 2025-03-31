@@ -1,3 +1,9 @@
+.play-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Можно увеличить, если кнопка слишком близко к тексту */
+}
 .colorful-button-primary {
     --duration: 7s;
     --delay: 0s;
