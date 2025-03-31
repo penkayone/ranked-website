@@ -16,7 +16,7 @@ html {
 header {
     display: flex;
     justify-content: flex-start;
-    gap: 65px;
+    gap: 8px;
     align-items: center;
     padding: 5px 20px;
     font-size: 18px;
@@ -27,7 +27,7 @@ header {
 header .logo-info {
     display: flex;
     align-items: center;
-    gap: 19px;
+    gap: 22px;
     font-size: 26px;
     font-weight: bold;
     color: white;
@@ -42,19 +42,24 @@ header .logo {
 }
 
 header .logo-info .logo-text {
-    text-align: left;
-    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* Расположение сверху вниз */
+    align-items: flex-start; /* Выровнять влево */
+    line-height: 1; /* Убираем лишние отступы */
 }
+
+header .logo-info .logo-text div:last-child {
+    font-family: 'inter';
+    font-weight: normal;
+    margin-left: 2px; /* Подбирай значение под дизайн */
+}
+
 header .logo-info .logo-text > div:nth-child(2) {
     font-size: 18px;
 }
 
 header menu ul {
     margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 16px;
     align-items: center;
 }
 header menu ul li a {
@@ -73,18 +78,28 @@ header menu ul li a {
 }
 
 header .gradient-btn {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    display: inline-flex;
+    gap: 8px;
+    font-size: 16px;
+    margin-left: 11px;
 }
 
 header .gradient-btn:hover {
     background: rgb(120, 0, 181);
     background: linear-gradient(142deg, rgb(120, 0, 149) 21%, rgb(220, 88, 88) 70%, rgb(211, 141, 42) 100%);
 }
-.nav-buttons {
+.nav-buttons ul {
     display: flex;
-    gap: 15px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.nav-buttons li {
+    margin: 0;
 }
 
 .colorful-button1 {

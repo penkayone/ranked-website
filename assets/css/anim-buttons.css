@@ -30,7 +30,7 @@
     color: var(--c-color);
     background: radial-gradient(circle, var(--c-radial-inner), var(--c-radial-outer) 80%);
     box-shadow: 0 0 20px var(--c-shadow);
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .colorful-button:before {
