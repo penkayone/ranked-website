@@ -197,7 +197,8 @@ body {
     height: 100vh;
     color: white;
     position: relative;
-    font-family: "Inter", Arial;
+    font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
     align-items: center;
     flex-direction: column;
 }
@@ -224,6 +225,9 @@ body::before {
 .page-title {
     font-size: 100px;
     font-weight: 700; /* Полностью жирный текст */
+    font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -2px;
     background: linear-gradient(45deg, #B889CE 0%, #D05490 55%, #EA4245 91%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -239,7 +243,7 @@ body::before {
 .page-title2 {
     font-size: 32px;
     font-weight: 400; /* Полностью жирный текст */
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
