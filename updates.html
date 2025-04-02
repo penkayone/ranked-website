@@ -3,71 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Updates - RANKED.CC</title>
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Основной CSS -->
-    <link rel="stylesheet" href="assets/css/updates.css"> <!-- Стили для Updates -->
+    <title>UPDATES | RANKED.CC</title>
+    <link rel="stylesheet" href="assets/css/updates.css">
+    <link rel="stylesheet" href="assets/css/anim-buttons-updates.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
-<header class="header">
-    <div class="logo">
-        <img src="assets/images/logo.jpg" alt="Ranked Project">
-        <span>Ranked Project</span>
+<div class="background-overlay"></div>
+
+<header>
+    <div class="header-container">
+        <div class="logo-info">
+            <img class="logo" src="assets/images/logo.jpg" alt="logo.jpg" width="64" height="64">
+            <div class="logo-text">
+                <div>Ranked Project</div>
+                <div>play.ranked.cc</div>
+            </div>
+        </div>
+        <nav class="nav-buttons">
+            <ul>
+                <li>
+                    <a href="index.html" class="colorful-button light active">
+                        <div class="wrapper"><i class="fa-solid fa-house"></i>
+                            <span>Home</span>
+                            <div class="circle circle-12"></div>
+                            <div class="circle circle-11"></div>
+                            <div class="circle circle-10"></div>
+                            <div class="circle circle-9"></div>
+                            <div class="circle circle-8"></div>
+                            <div class="circle circle-7"></div>
+                            <div class="circle circle-6"></div>
+                            <div class="circle circle-5"></div>
+                            <div class="circle circle-4"></div>
+                            <div class="circle circle-3"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-1"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="colorful-button light">
+                        <div class="wrapper"><i class="far fa-lightbulb"></i>
+                            <span>Vision</span>
+                            <div class="circle circle-12"></div>
+                            <div class="circle circle-11"></div>
+                            <div class="circle circle-10"></div>
+                            <div class="circle circle-9"></div>
+                            <div class="circle circle-8"></div>
+                            <div class="circle circle-7"></div>
+                            <div class="circle circle-6"></div>
+                            <div class="circle circle-5"></div>
+                            <div class="circle circle-4"></div>
+                            <div class="circle circle-3"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-1"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.gg/GZAhBCQFWM" class="colorful-button light">
+                        <div class="wrapper"><i class="fab fa-discord"></i>
+                            <span>Discord</span>
+                            <div class="circle circle-12"></div>
+                            <div class="circle circle-11"></div>
+                            <div class="circle circle-10"></div>
+                            <div class="circle circle-9"></div>
+                            <div class="circle circle-8"></div>
+                            <div class="circle circle-7"></div>
+                            <div class="circle circle-6"></div>
+                            <div class="circle circle-5"></div>
+                            <div class="circle circle-4"></div>
+                            <div class="circle circle-3"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-1"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="gradient-btn"><i class="fa-solid fa-shop"></i> Store</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </div>
-    <nav class="nav-buttons">
-        <button class="nav-btn">🏠 Home</button>
-        <button class="nav-btn">📢 Updates</button>
-        <button class="nav-btn">📊 Stats</button>
-        <button class="nav-btn">📞 Contact</button>
-    </nav>
 </header>
 
-<main class="updates-container">
-    <!-- Левая секция с карточками обновлений -->
-    <section class="updates-list">
-        <div class="update-card" data-date="2025-03-30">
-            <img src="https://medinvestltd.ru/upload/iblock/2dc/2dc485d3690e3db66404c10ddc5e5b8b.jpg" alt="Update Image">
-            <div class="update-info">
-                <h2 class="update-title">Server Release coming soon!</h2>
-                <p class="update-meta">March 31, 2025 · 🔑 penkay · 👀 0 views</p>
-                <p class="update-desc">Lorem Ipsum is simply dummy text of the printing industry...</p>
-                <button class="read-more">Click to Read!</button>
+<div class="main-container">
+    <main class="content-area">
+        <div class="update-card">
+            <h2 class="update-title gradient-text">Server Release coming soon!</h2>
+            <div class="update-meta">
+                <span class="update-date">March 31, 2025</span>
+                <span class="update-author">Penkay</span>
+                <span class="update-version">views</span>
+            </div>
+            <p class="update-content">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the Lorem Ipsum is simply dummy text...
+            </p>
+            <a href="#" class="gradient-btn read-more-btn">
+                <i class="fas fa-arrow-right"></i>
+                <span>Click to Read!</span>
+            </a>
+        </div>
+    </main>
+
+    <aside class="filters-sidebar">
+        <div class="filter-section">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <label for="filter-relevance">Relevance</label>
+                <select id="filter-relevance">
+                    <option value="Newest">Newest</option>
+                    <option value="Oldest">Oldest</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-popularity">Popularity</label>
+                <select id="filter-popularity">
+                    <option value="Most Popular">Most Popular</option>
+                    <option value="Least Popular">Least Popular</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="filter-author">Author</label>
+                <input type="text" id="filter-author" placeholder="Search author...">
+            </div>
+            <div class="filter-buttons">
+                <button id="apply-filter" class="gradient-btn">Apply</button>
+                <button id="reset-filter" class="secondary-btn">Reset</button>
             </div>
         </div>
-        <div class="update-card" data-date="2025-03-25">
-            <img src="https://i.otzovik.com/objects/b/100000/90706.png" alt="Update Image">
-            <div class="update-info">
-                <h2 class="update-title">Обслуживание серверов</h2>
-                <p class="update-meta">25 марта 2025 · 🛠 Поддержка</p>
-                <p class="update-desc">Запланированное обслуживание серверов...</p>
-                <button class="read-more">Click to Read!</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Правая секция с фильтрами -->
-    <aside class="filters">
-        <h2>Filters</h2>
-
-        <label for="filter-relevance">Relevance</label>
-        <select id="filter-relevance">
-            <option value="Newest">Newest</option>
-            <option value="Oldest">Oldest</option>
-        </select>
-
-        <label for="filter-popularity">Popularity</label>
-        <select id="filter-popularity">
-            <option value="N/A">N/A</option>
-            <option value="MostViewed">Most Viewed</option>
-        </select>
-
-        <label for="filter-author">Author</label>
-        <input type="text" id="filter-author" placeholder="Enter author name">
-
-        <button id="apply-filter" class="filter-btn">Apply Filter</button>
-        <button id="reset-filter">Reset</button>
     </aside>
-</main>
+</div>
 
+<footer>
+    <div class="cart-icon">🛒</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 <script src="assets/js/updates.js"></script>
 </body>
 </html>
