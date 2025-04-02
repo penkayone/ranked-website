@@ -1,0 +1,30 @@
+.description-text {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+}
+/* Заголовок */
+.page-title {
+    font-size: 100px;
+    font-weight: 700; /* Полностью жирный текст */
+    font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -2px;
+    background: linear-gradient(45deg, #B889CE 0%, #D05490 55%, #EA4245 91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.page-title2 {
+    font-size: 32px;
+    font-weight: 400; /* Полностью жирный текст */
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.2s ease-in-out;
+}

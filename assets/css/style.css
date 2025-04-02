@@ -1,3 +1,7 @@
+* {
+    box-sizing: inherit;
+}
+
 html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -7,9 +11,27 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+    font-optical-sizing: auto;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    flex-direction: column;
+}
 
-* {
-    box-sizing: inherit;
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Чтобы не перекрывало текст */
 }
 
 /* Верхняя панель */
@@ -19,7 +41,6 @@ header {
     background: rgba(28, 28, 28, 1);
     box-shadow: 1px 2px 4px rgb(0 0 0 / 45%);
 }
-
 /* Стиль для названия RANKED.CC */
 header .logo-info {
     display: flex;
@@ -31,7 +52,6 @@ header .logo-info {
     font-weight: bold;
     color: white;
 }
-
 header .logo {
     text-align: left;
     border-radius: 50%;
@@ -39,24 +59,20 @@ header .logo {
     color: white;
     text-transform: uppercase;
 }
-
 header .logo-info .logo-text {
     display: flex;
     flex-direction: column; /* Расположение сверху вниз */
     align-items: flex-start; /* Выровнять влево */
     line-height: 1; /* Убираем лишние отступы */
 }
-
 header .logo-info .logo-text div:last-child {
     font-family: 'inter';
     font-weight: normal;
     margin-left: 2px; /* Подбирай значение под дизайн */
 }
-
 header .logo-info .logo-text > div:nth-child(2) {
     font-size: 18px;
 }
-
 header menu ul {
     align-items: center;
 }
@@ -74,14 +90,12 @@ header menu ul li a {
     margin-top: 2px;
     display: flex;
 }
-
 header .gradient-btn {
     display: inline-flex;
     gap: 8px;
     font-size: 16px;
     margin-left: 11px;
 }
-
 header .gradient-btn:hover {
     background: rgb(120, 0, 181);
     background: linear-gradient(142deg, rgb(120, 0, 149) 21%, rgb(220, 88, 88) 70%, rgb(211, 141, 42) 100%);
@@ -105,14 +119,12 @@ header .nav-buttons.mobile ul {
     flex-direction: column;
     gap: 10px;
 }
-
 header .nav-buttons ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 header .nav-buttons li {
     margin: 0;
 }
@@ -137,6 +149,9 @@ header .burger-menu {
     font-size: 24px;
 }
 
+/*
+    Buttons
+ */
 .colorful-button1 {
     position: relative;
     overflow: hidden;
@@ -154,6 +169,9 @@ header .burger-menu {
     align-items: center;
     gap: 10px;
     transition: 5.1s ease-in-out;
+}
+.colorful-button1:hover {
+    background-position: 100% 50%;
 }
 
 /* Слой анимации */
@@ -175,81 +193,8 @@ header .burger-menu {
     transform: translateX(90%);
 }
 
-.colorful-button1:hover {
-    background-position: 100% 50%;
-}
 
 
-
-/* Основной блок */
-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Затемняем фон */
-body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    height: 100vh;
-    color: white;
-    position: relative;
-    font-optical-sizing: auto;
-    font-family: "Inter", sans-serif;
-    align-items: center;
-    flex-direction: column;
-}
-
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Чтобы не перекрывало текст */
-}
-
-.description-text {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-
-}
-/* Заголовок */
-.page-title {
-    font-size: 100px;
-    font-weight: 700; /* Полностью жирный текст */
-    font-optical-sizing: auto;
-    font-family: "Inter", sans-serif;
-    letter-spacing: -2px;
-    background: linear-gradient(45deg, #B889CE 0%, #D05490 55%, #EA4245 91%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 0;
-    padding: 0;
-}
-
-/* Применяем анимацию ко всем заголовкам и тексту */
-.page-title {
-    animation: fadeIn 1.2s ease-in-out;
-}
-
-.page-title2 {
-    font-size: 32px;
-    font-weight: 400; /* Полностью жирный текст */
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.page-title2 {
-    animation: fadeIn 1.2s ease-in-out;
-}
 
 /* Кнопка */
 .btn {
@@ -267,61 +212,41 @@ body::before {
 
 /* Стили для кнопок */
 .secondary-btn {
-    position: relative;
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
+    gap: 8px;
+    padding: 12px 29px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: black;
+    background: linear-gradient(142deg, rgb(167 141 185) 21%, #4CAF50 70%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 30px;
     text-decoration: none;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
-
-/* Градиентное свечение */
-.secondary-btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-}
-
-/* Эффект наведения */
 .secondary-btn:hover {
-    color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.9);
+    background: linear-gradient(142deg, rgb(132, 113, 147) 21%, #4ba850 70%, rgb(209, 146, 56) 100%);
 }
 
-/* Анимация свечения */
-.secondary-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
+.gradient-btn {
+    align-items: center;
+    gap: 8px;
+    padding: 12px 29px;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: black;
+    background: linear-gradient(142deg, rgba(131, 58, 180, 1) 21%, rgb(251, 88, 88) 70%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
 }
-
-/* Дополнительный эффект: свечение границ */
-.secondary-btn::after {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
-    z-index: -1;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.secondary-btn:hover::after {
-    opacity: 1;
+.gradient-btn:hover {
+    background: linear-gradient(142deg, rgb(120, 0, 149) 21%, rgb(220, 88, 88) 70%, rgb(211, 141, 42) 100%);
 }
 
 .btn:hover {
