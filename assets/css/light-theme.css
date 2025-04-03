@@ -1,0 +1,22 @@
+body.light-theme {
+    background-image: url("../images/background-white.webp");
+    color: black;
+}
+
+body.light-theme header {
+    background: rgba(240, 240, 240, 1);
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 20%);
+}
+
+body.light-theme .theme-toggle {
+    color: black;
+}
+body.light-theme .filter-section h3 {
+    color: inherit;
+}
+body.light-theme .filter-section .filter-group label {
+    color: inherit;
+}
+body.light-theme .update-card .content .update-meta {
+    color: white;
+}

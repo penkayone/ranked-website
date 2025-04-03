@@ -1,17 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Инициализация фильтров
     initFilters();
-
-    // Бургер-меню для мобильной версии
-    const burgerMenu = document.querySelector('.burger-menu');
-    if (burgerMenu) {
-        burgerMenu.addEventListener('click', function() {
-            const navButtons = document.querySelector('.nav-buttons');
-            if (navButtons) {
-                navButtons.style.display = navButtons.style.display === 'block' ? 'none' : 'block';
-            }
-        });
-    }
 });
 
 function initFilters() {
