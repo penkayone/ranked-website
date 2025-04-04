@@ -229,7 +229,8 @@ header .burger-menu {
     font-size: 16px;
     letter-spacing: 0.02em;
     color: black;
-    background: linear-gradient(142deg, rgb(167 141 185) 21%, #4CAF50 70%, rgba(252, 176, 69, 1) 100%);
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 30%, rgba(253,187,45,1) 100%);
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
@@ -238,7 +239,8 @@ header .burger-menu {
     cursor: pointer;
 }
 .secondary-btn:hover {
-    background: linear-gradient(142deg, rgb(132, 113, 147) 21%, #4ba850 70%, rgb(209, 146, 56) 100%);
+    background: rgb(28, 157, 159);
+    background: linear-gradient(0deg, rgb(29, 166, 168) 30%, rgb(197, 149, 40) 100%);
 }
 
 .gradient-btn {
