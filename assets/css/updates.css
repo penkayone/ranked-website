@@ -169,6 +169,39 @@
     --c-radial-outer: #fff;
     --c-color: black;
 }
+.admin-panel {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    color: white;
+}
+
+.admin-panel h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+#admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#admin-form input,
+#admin-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background: #2c2c2c;
+    color: white;
+}
+
+#admin-form textarea {
+    resize: vertical;
+    height: 100px;
+}
 
 /* Корзина */
 .cart-icon {
