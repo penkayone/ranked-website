@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Защищённая страница</title>
+</head>
+<body>
+<h2>Проверка доступа</h2>
+<button id="checkAccess">Проверить доступ</button>
+<div id="accessResult"></div>
+
+<script>
+    document.getElementById('checkAccess').addEventListener('click', async () => {
+        const token = localStorage.getItem('token');
+
+        const res = await fetch('http://localhost:3001/protected', {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        });
+
+        const data = await res.json();
+        document.getElementById('accessResult').innerText = data.message || 'Ошибка: доступ запрещён';
+    });
+</script>
+</body>
+</html>

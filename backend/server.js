@@ -1,24 +1,49 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
 const app = express();
 const PORT = 3001;
+const SECRET_KEY = 'mysecretkey';
 
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.send('Backend работает!');
-});
+// 🔐 Пример одного пользователя
+const users = [
+    {
+        username: 'admin',
+        password: bcrypt.hashSync('admin123', 10), // хешированный пароль
+    }
+];
 
-// Пример авторизации (заглушка)
+// 📩 Авторизация
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
+    const user = users.find((u) => u.username === username);
 
-    // Пример простой логики
-    if (username === 'admin' && password === '1234') {
-        res.json({ success: true, token: 'FAKE_JWT_TOKEN' });
-    } else {
-        res.status(401).json({ success: false, message: 'Неверный логин или пароль' });
+    if (!user) return res.status(401).json({ message: 'Пользователь не найден' });
+
+    const isValid = bcrypt.compareSync(password, user.password);
+    if (!isValid) return res.status(401).json({ message: 'Неверный пароль' });
+
+    const token = jwt.sign({ username }, SECRET_KEY, { expiresIn: '1h' });
+    res.json({ token });
+});
+
+// 🛡️ Защищённый маршрут
+app.get('/protected', (req, res) => {
+    const authHeader = req.headers.authorization;
+    if (!authHeader) return res.status(401).json({ message: 'Нет токена' });
+
+    const token = authHeader.split(' ')[1];
+    try {
+        const decoded = jwt.verify(token, SECRET_KEY);
+        res.json({ message: 'Доступ разрешён 🎉', userId: decoded.username });
+    } catch (err) {
+        res.status(401).json({ message: 'Неверный токен' });
     }
 });
 

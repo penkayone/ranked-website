@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+</head>
+<body>
+<h2>Вход</h2>
+<form id="loginForm">
+    <input type="text" id="username" placeholder="Имя" required />
+    <input type="password" id="password" placeholder="Пароль" required />
+    <button type="submit">Войти</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const response = await fetch('http://localhost:3001/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            document.getElementById('result').innerText = '✅ Успешный вход!';
+            localStorage.setItem('token', data.token);
+            setTimeout(() => window.location.href = 'protected.html', 1000);
+        } else {
+            document.getElementById('result').innerText = '❌ Ошибка: ' + data.message;
+        }
+    });
+</script>
+</body>
+</html>
