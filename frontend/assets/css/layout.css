@@ -32,3 +32,10 @@
         width: 90%;
     }
 }
+@media (max-width: 700px) {
+    header .gradient-btn {
+        margin-left: 0;
+        align-self: center; /* Центрирует внутри flex-контейнера */
+        justify-content: center; /* Центруем иконку и текст внутри кнопки */
+    }
+}

@@ -107,6 +107,7 @@ header .nav-buttons {
 header .nav-buttons.mobile {
     display: flex;
     position: absolute;
+    height: 180%;
     top: 32px;
     left: 0;
     right: 0;
